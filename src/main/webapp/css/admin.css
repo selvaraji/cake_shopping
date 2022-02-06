@@ -1,0 +1,143 @@
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+    font-family: 'Arial'
+}
+
+.profile {
+ 	align-items: center;
+ 	height:1000px;
+    overflow: hidden;  
+    background-image:url("../photos/pattern.png");
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+    padding-left: 25%;
+    padding-top: 15%;
+  
+ }
+ h1{
+    padding-left: 10%;
+    color: rgb(255, 0, 221);
+  	text-shadow: 0 1px 0 rgb(231, 0, 202),
+               0 2px 0 rgb(185, 0, 161),
+               0 3px 0 rgb(150, 0, 130),
+               0 4px 0 rgb(122, 0, 106),
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+ }
+ h2 {
+ color: #000000;
+ }
+ 
+  
+ .mySlides {display: none;}
+img {vertical-align: middle;}
+
+#image{
+	height: 510px;
+	overflow:hidden;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+ 
+#welcome {
+	position: inherit;
+  	height: 500px;
+    overflow: hidden;  
+    margin: auto;  
+    width: 100%;
+	background-image:url("../photos/pattern.png");
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+    text-align: center;
+}
+
+
+ #bar {
+ list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+    position: fixed;
+    background-color: aqua;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+ 	float:left;
+ }
+ 
+  #bar ul li a:hover, .dropdown:hover .categorydropbtn, .dropdown:hover .accountdropbtn , #check:hover{
+    background-color: rgb(67 252 0);
+    box-shadow: 10px 10px 20px #000000;
+    border-radius: 15px ; 
+  }
+ 
+ .category-content, .account-content{
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px ; 
+  }
+  
+  .category-content a ,.account-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .category-content a:hover, .account-content a:hover{
+      background-color: rgb(67 252 0)
+    }
+  
+  .dropdown:hover .category-content ,.dropdown:hover .account-content{
+    display: block;
+  }
+
+  
+  #bar ul li {
+  	float:left;
+  	list-style-type : none;
+  }
+  
+  li a, .categorydropbtn, #check{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 15px ; 
+    font-weight: bold;
+  }
+  
+   #bar ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 15px ; 
+    font-weight: bold;
+  }
+  
+ .dropdown {
+    display: inline-block;
+    border-radius: 15px ; 
+  }
+  

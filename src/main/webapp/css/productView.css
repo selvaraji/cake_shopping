@@ -1,0 +1,190 @@
+@charset "ISO-8859-1";
+
+  .productView li {
+    float: right;
+    list-style-type: none;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+  
+  body {
+  margin: 0px;
+  font-family: 'Arial';  
+  }
+  
+  #image {
+  border-radius :10px; 
+  }
+  .stars img , #star img{
+ 	width : 20px;
+  	height : 20px;
+  }
+  
+  .offer{
+  display: inline;
+  }
+  
+  .offer li {
+  display: flex;
+  }
+  
+  .offer img {
+  margin-top: 10px;
+  width : 40px;
+  height: 40px;
+  padding-right:30px;
+  }
+
+  .details {
+  	float: right;
+    margin-top: 70px;
+    max-width: 65%;
+  }
+  
+  .function {
+    width: auto;  
+    height: fit-content;
+    overflow: hidden;  
+    margin: auto;   
+    max-height: 200px;
+    padding: 10px;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+    text-align: center;
+  }
+ 
+  .scroll {
+  	overflow-x: auto;
+    max-height: 250px;
+    padding: 10px;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+  }
+  .scroll ul {
+  	white-space: nowarp;
+  	overflow-x: auto;
+  }
+  
+  .scroll ul li  {
+  float : left;
+  display: inline;
+  }
+  
+  
+  #cart {
+    width: 150px;  
+    height: 40px; 
+    border: none;  
+    font-size: 18px;
+    border-radius: 10px;  
+    padding-left: 7px; 
+    margin-top: 10px; 
+    background-color: orange; 
+    color : white;
+  }
+  
+   #buy {
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 7px;
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+  }
+  
+  
+  #cart:hover , #buy:hover{
+  background-color : lime;
+  }
+  
+  
+  #bar {
+ 	list-style-type: none;
+    margin-top: 5px;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+    position: fixed;
+    background-color: aqua;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+ 	float:left;
+ 	top: 0px;
+ 	height: 51px;
+ }
+ 
+  #bar ul li a:hover, .dropdown:hover .categorydropbtn, .dropdown:hover .accountdropbtn , #check:hover{
+    background-color: rgb(67 252 0);
+    box-shadow: 10px 10px 20px #000000;
+    border-radius: 15px ; 
+  }
+  
+  #bar ul {
+  margin :0px;
+  }
+ 
+ .category-content, .account-content{
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px ; 
+  }
+  
+  .category-content a ,.account-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .category-content a:hover, .account-content a:hover{
+      background-color: rgb(67 252 0)
+    }
+  
+  .dropdown:hover .category-content ,.dropdown:hover .account-content{
+    display: block;
+  }
+
+  
+  #bar ul li {
+  	float:left;
+  	list-style-type : none;
+  	padding-left: 5px;
+  }
+  
+  .categorydropbtn, #check{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 15px ; 
+    font-weight: bold;
+  }
+  
+   #bar ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 15px ; 
+    font-weight: bold;
+  }
+  
+ .dropdown {
+    display: inline-block;
+    border-radius: 15px ; 
+  }
+  
+  
+  
+  

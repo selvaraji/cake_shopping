@@ -1,0 +1,60 @@
+
+body{
+    background-image: url("../photos/back.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+}
+.box{
+  overflow: auto;
+  height : 500px;
+}
+
+div.scrollmenu {
+    background-color:transparent;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  div.scrollmenu img {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    text-decoration: none;
+    width: 180px;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: rgb(71, 71, 71);
+  }
+
+  .sam {
+    height: 100px;
+  }
+
+  #output {
+    padding: 100px;
+  }
+
+  #output img{
+    width: 500px;
+    position: fixed;
+    height: 500px;
+  }
+#buynow {
+  margin: 10px 10px 10px 200px;
+  width: 100px;
+  border-radius: 5px;  
+  background-color: rgb(128, 255, 0);
+  text-transform: bold;
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: bold;
+}
+
+#buynow:hover {
+  background-color: rgb(2, 204, 2);
+}

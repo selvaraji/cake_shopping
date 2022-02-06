@@ -1,0 +1,210 @@
+body  
+{  
+    margin: 0;  
+    padding-top: 100px;  
+    background-image: url('../photos/back.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+    font-family: 'Arial';  
+}  
+.login{  
+        
+        width: 325px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background-color: #37bdf1d1;
+        border-radius: 15px ;  
+        box-shadow: 10px 10px 20px #000000; 
+} 
+
+.SignUp{  
+    width: 325px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;  
+    background-color: #37bdf1d1;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+      
+} 
+.admin{     
+    width: 450px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;  
+    background-color: #37bdf1d1;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+}
+
+
+h3 {
+	text-align: center;  
+    color: black;  
+    padding: 20px;  
+}
+label{  
+    color: #000000;  
+    font-size: 15px;  
+}
+
+#productID, #price, #weight, #stock, #title, #description, #photoURL, #info {
+	width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}   
+
+#categoryName {
+	width: 200px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#buttonAddCategory
+{
+	 width: 95px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 10px;  
+    color: #000000; 
+}
+
+select 
+{
+	width: 310px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#button{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    font-size: 18px;
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: #000000; 
+} 
+#phoneNumber, #address, #email, #Pass, #Pass2, #age,#name {
+    width: 300px;  
+    height: 30px;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#phoneNumber:invalid, #address:invalid, #email:invalid, #Pass:invalid, #Pass2:invalid, #age:invalid,#name:invalid {
+	border: 3px solid;  
+	border-color:red;
+	color: red;
+}
+
+#name:valid ,#phoneNumber:valid, #address:valid, #email:valid, #Pass:valid, #Pass2:valid, #age:valid{
+	border: 4px solid;  
+	border-color: rgb(0, 128, 0);
+	color:green;
+}
+
+input:focus{
+	font-size: 17px;
+}
+
+ 
+#log{  
+    width: 310px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;
+    font-size: 18px;
+    font-family: cursive;
+}  
+#log:hover ,#signUp:hover, #button:hover, #buttonAddCategory:hover{
+    background-color: #00f7009f;
+}
+
+
+
+
+#signUp{  
+    width: 310px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;    
+     color: black;
+    font-size: 18px;
+    font-family: cursive;
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+}
+
+#welcometxt {
+	padding-left: 30%;
+
+  }
+  
+h1{
+    padding-left: 40%;
+    color: rgb(255, 0, 221);
+  	text-shadow: 0 1px 0 rgb(221, 0, 192),
+               0 2px 0 rgb(185, 0, 161),
+               0 3px 0 rgb(150, 0, 130),
+               0 4px 0 rgb(122, 0, 106),
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+ }
+ 
+ #tag {
+ padding-left:25%;
+ }
+ 
+ #admin {
+ text-align: center;
+  color: rgb(255, 0, 221);
+  	text-shadow: 0 1px 0 rgb(221, 0, 192),
+               0 2px 0 rgb(185, 0, 161),
+               0 3px 0 rgb(150, 0, 130),
+               0 4px 0 rgb(122, 0, 106),
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 5px 10px rgba(0,0,0,.25),
+               0 3px 5px rgba(0,0,0,.2),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+ }
+ 
+ .profile {
+ 	align-items:left;
+ 	width: 450px;  
+    overflow: hidden;  
+    margin: auto;   
+    background-color: #37bdf191;
+    border-radius: 15px ;  
+    box-shadow: 10px 10px 20px #000000;
+    padding : 70px;
+  
+ }
+ 
