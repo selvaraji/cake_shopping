@@ -1,7 +1,7 @@
 <!-- Project Name : Online Cake Shopping System
 	 Author Name  : Selvaraji A
 	 Started At   : 12-12-2021
-	 Updated At   : 31-01-2022
+	 Updated At   : 6-02-2022
 product view page
 ratings, specification, reviews, -->
 
