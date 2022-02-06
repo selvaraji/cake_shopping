@@ -2,8 +2,7 @@
 	 Author Name  : Selvaraji A
 	 Started At   : 12-12-2021
 	 Updated At   : 6-02-2022
-product view page
-ratings, specification, reviews, -->
+	 git- https://github.com/selvaraji/cake_shopping.git -->
 
 
 
