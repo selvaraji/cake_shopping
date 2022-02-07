@@ -98,18 +98,19 @@ out.println("<h3>Flat 10% off on xxx bank debit and credit cards.</h3>");
 out.println("</li>");
 out.println("<li>");
 out.println("<img src ='../photos/icons/tag.png'>");
-out.println("<h3>buy this product and get upto Rs.50 on next cake purchase.</h3>");
+out.println("<h3>Buy this product and get upto Rs.50 on next cake purchase.</h3>");
 out.println("</li>");
 out.println("</ul>");
 
 out.println("<p>"+description+"</p>");
 out.println("<h2>Details</h2>");
-out.println("<h4>Cake flavor &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:</h4>");
-out.println("<h4>Type of cake&nbsp; &nbsp;&nbsp;&nbsp;:</h4>");
-out.println("<h4>Type of Bread&nbsp; &nbsp;:</h4>");
+out.println("<h4>Cake flavor &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;: "+title+"</h4>");
+
+out.println("<h4>Type of Cake&nbsp; &nbsp; : Cream</h4>");
+float weightFloat = Float.parseFloat(weight);
 out.println("<h4>Weight &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "+weight+" kg</h4>");
-out.println("<h4>Serves&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4>");
-out.println("<h4>Size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</h4>");
+out.println("<h4>Serves&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "+weightFloat*8+" Servings</h4>");
+out.println("<h4>Size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: "+weightFloat*10+" X "+weightFloat*10+" Inch</h4>");
 
 out.println("<h2>Please Note</h2>");
 out.println("<ul><li><p>The cake stand, cutlery & accessories used in the image are only for representation purposes. They are not delivered with the cake.</p></li>");
@@ -128,7 +129,7 @@ out.println("<ul><li><p>Store cream cakes in a refrigerator. Fondant cakes shoul
 		"<li><p>Please check the placement of these items before serving to small children.</p></li>"+
 		"<li><p>The cake should be consumed within 24 hours.</p></li>"+
 		"<li><p>Enjoy your cake!</p></li>");
-out.println("");
+out.println("<h2>Reviews</h2>");
 out.println("");
 //ingrdientss
 //reviews

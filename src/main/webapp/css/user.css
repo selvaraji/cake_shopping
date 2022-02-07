@@ -229,12 +229,13 @@ ul{
 
 
 #stock {
-	position: absolute;
+	width: fit-content;
+	position: inherit;
     border-radius: 10px;
     border: thin;
     font-size: 18px;
     padding: 3px;
-    background-color: rgb(128, 128, 255);
+    background-color: rgb(233 255 0 / 46%);
 }
 
 #sliced{

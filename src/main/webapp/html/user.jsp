@@ -183,8 +183,8 @@
 						out.println("<li>");
 						out.println("<div class='product-card' >");
 						out.println("<a href=\"../html/productView.jsp?id="+productID+"\" target='_blank'>");
-						out.println("<div class='product-tumb' '>");
 						out.println("<h4 id ='stock'>"+stock+" left"+"</h4>");
+						out.println("<div class='product-tumb' '>");
 						out.println("<img id = 'cake'  src=" + photoURL + " alt=''>");
 						out.println("</div>");
 						out.println("<div class='product-details'>");
@@ -242,8 +242,8 @@
 						out.println("<li>");
 						out.println("<div class='product-card'>");
 						out.println("<a href=\"../html/productView.jsp?id="+productID+"\" target='_blank'>");
-						out.println("<div class='product-tumb'>");
 						out.println("<h4 id ='stock'>"+stock+" left"+"</h4>");
+						out.println("<div class='product-tumb'>");
 						out.println("<img id = 'cake'  src=" + photoURL + " alt=''>");
 						out.println("</div>");
 						out.println("<div class='product-details'>");
