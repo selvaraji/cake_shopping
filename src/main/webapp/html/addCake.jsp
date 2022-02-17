@@ -84,7 +84,8 @@
         <br><br>
         <input type="text" name="info" id="info" placeholder="Short Description" required>    
         <br><br>
-        
+        <input type="text" name="key" id="key" placeholder="Keywords (Separat by Comma)" required>    
+        <br><br>
         <input type="submit"  id = "button" value="Add Cake" >  
         <br><br>
     </form>     

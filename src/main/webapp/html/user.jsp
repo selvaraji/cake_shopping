@@ -96,7 +96,7 @@
 		<li><a href="../html/design.jsp" class="design">Design Cake</a></li>
 		<li>
 			<div class="dropdown">
-				<a href="#" class="accountdropbtn">Account <% out.print("("+name+")"); %> </a>
+				<a class="accountdropbtn">Account <% out.print("("+name+")"); %> </a>
 				<div class="account-content">
 					<a href="../html/profile.jsp">Profile</a> <a
 						href="../html/orders.jsp">Orders</a> <a href="../html/cart.jsp">Cart</a>
@@ -106,42 +106,47 @@
 		</li>
 		<li><a href="../html/about.jsp" class="about">About</a>
 		</li>
-		
+		<li class='search'>
+		 <input type ='button' id='searchButton' value ='S'  onclick="search()">
+		</li>
+		<li class='search'>
+		<input type='text' id='search'>
+		</li>
 	</ul>
 	<br>
 	<br><br><br>
 	<div id="sliced">
 	<ul>
 	<li>
-		<img src = "../photos/slicedCakes/butterscotch_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=butterscotch'" ><img src = "../photos/slicedCakes/butterscotch_0.jpg" ></a>
 		<h3 id = "text1" >Butterscotch</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/black_forest_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=blackforest'" ><img src = "../photos/slicedCakes/black_forest_0.jpg"></a>
 		<h3 id = "text2" >Black Forest</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/chocolate_2.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=chocolate'" ><img src = "../photos/slicedCakes/chocolate_2.jpg"></a>
 		<h3 id = "text3">Chocolate</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/fruit_0.jpg">
-		<h3 id = "text4">  Fruit</h3>
+		<a href='#' onclick="location.href='../html/search.jsp?search=fruit'" ><img src = "../photos/slicedCakes/fruit_0.jpg"></a>
+		<h3 id = "text4">Fruit</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/kit_kat_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=kitkat'" ><img src = "../photos/slicedCakes/kit_kat_0.jpg"></a>
 		<h3 id = "text5"> Kit Kat</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/pineapple_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=pineapple'" ><img src = "../photos/slicedCakes/pineapple_0.jpg"></a>
 		<h3 id = "text6">Pineapple</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/red_velvet_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=redvelvet'" ><img src = "../photos/slicedCakes/red_velvet_0.jpg"></a>
 		<h3 id = "text7">Red Velvet</h3>
 	</li>
 	<li>
-		<img src = "../photos/slicedCakes/vanilla_0.jpg">
+		<a href='#' onclick="location.href='../html/search.jsp?search=vanilla'" ><img src = "../photos/slicedCakes/vanilla_0.jpg"></a>
 		<h3 id = "text8">Vanilla</h3>
 	</li>
 	</ul>
@@ -149,15 +154,18 @@
 	
 	<div id="welcome">
 		<div class="mySlides">
-		  <img id="image" src="../photos/slide/slide 1.jpg" style="width:100%">
+		<a href="../html/search.jsp?search=cho">
+		  <img id="image" src="../photos/slide/slide 1.jpg" style="width:100%"></a>
 		</div>
 		
 		<div class="mySlides">
-		  <img id="image"  src="../photos/slide/slide 2.jpg"  style="width:100%">
+		<a href="../html/search.jsp?search=red">
+		  <img id="image"  src="../photos/slide/slide 2.jpg"  style="width:100%"></a>
 		</div>
 		
 		<div class="mySlides">
-		  <img id="image"  src="../photos/slide/slide 3.jpg"  style="width:100%">
+		<a href="../html/search.jsp?search=but">
+		  <img id="image"  src="../photos/slide/slide 3.jpg"  style="width:100%"></a>
 		</div>
 		
 		</div>
@@ -179,7 +187,7 @@
 					String info = resultSet.getString(8);
 					String categoryna = resultSet.getString(9);
 
-					if (count!=6) {
+					if (count > 11 && count < 23) {
 						out.println("<li>");
 						out.println("<div class='product-card' >");
 						out.println("<a href=\"../html/productView.jsp?id="+productID+"\" target='_blank'>");
@@ -199,6 +207,7 @@
 						out.println("</li>");
 						count++;
 					}
+					count++;
 					
 				}
 				resultSet.absolute(0);

@@ -38,3 +38,17 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 2000);
 }
+
+function show(search)
+{
+	//hideothers(-1);
+}
+
+
+
+function search()
+{
+	var item = document.getElementById("search").value;
+	window.location.href = "../html/search.jsp?search="+item;
+	
+}

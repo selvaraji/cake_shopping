@@ -259,6 +259,10 @@ ul{
 	padding-left: 20px;
 }
 
+#sliced ul li a {
+	 padding: 0px 0px;
+}
+
 .footer {
 	width: auto;  
     height: fit-content;

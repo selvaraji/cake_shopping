@@ -37,10 +37,11 @@ public class UpdateCakeServlet extends HttpServlet {
 		String description = "$"+request.getParameter("description");
 		String photoURL = "$"+request.getParameter("photoURL");
 		String info = "$"+request.getParameter("info");
+		String keywords = "$"+request.getParameter("key");
 		String query="";
 		
-		String[] array1 = {price, weight, stock, title, description, photoURL, info};
-		String[] array2 = {"price", "weight", "stock", "title", "des", "url", "info"};
+		String[] array1 = {price, weight, stock, title, description, photoURL, info, keywords};
+		String[] array2 = {"price", "weight", "stock", "title", "des", "url", "info","keywords"};
 		
 		LoginDao loginDao = new LoginDao();
 		

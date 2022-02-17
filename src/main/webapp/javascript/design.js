@@ -1,8 +1,8 @@
 
-function shapeClick(num)
+/**function shapeClick(num)
 {
 	document.getElementById("shape").src = num;
-}
+}**/
 
 function sideClick(num)
 {

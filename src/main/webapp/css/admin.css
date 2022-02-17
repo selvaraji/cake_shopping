@@ -141,3 +141,25 @@ img {vertical-align: middle;}
     border-radius: 15px ; 
   }
   
+  
+  .search {
+  	float : right;
+  }
+  
+  #search {
+  	color: black;
+    padding: 10px 14px;
+    margin-right: 2px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  
+  #searchButton {
+  	padding: 10px 14px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }

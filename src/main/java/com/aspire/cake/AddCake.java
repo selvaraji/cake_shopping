@@ -36,12 +36,13 @@ public class AddCake extends HttpServlet {
 		String photoURL = request.getParameter("photoURL");
 		String info = request.getParameter("info");
 		String category = request.getParameter("category");
+		String keywords = request.getParameter("key");
 		
 		LoginDao loginDao = new LoginDao();
 		
 		try {
 			loginDao.loadDriver(loginDao.databaseDriver);
-			String query = "INSERT INTO PRODUCT VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String query = "INSERT INTO PRODUCT VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			Connection connection = loginDao.getConnection();
 			PreparedStatement preparedStatement;
 			preparedStatement = connection.prepareStatement(query);
@@ -54,6 +55,7 @@ public class AddCake extends HttpServlet {
 			preparedStatement.setString(7, photoURL);
 			preparedStatement.setString(8, info);
 			preparedStatement.setString(9, category);
+			preparedStatement.setString(10, keywords);
 			
 			preparedStatement.execute();
 		} catch (Exception e) {

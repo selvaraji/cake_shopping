@@ -89,7 +89,7 @@ out.println("<img src='../photos/icons/star.png'>"+
 "<img src='../photos/icons/star.png'>"+
 "<img src='../photos/icons/star_half.png'>");
 out.println("</div>");
-out.println("<h2>Rs."+price+"</h2>");
+out.println("<h2> " + "RS." +price+"&nbsp <small>Rs."+(Double.parseDouble(price) + 100)+"</small></h2>");
 out.println("<h2>offers</h2>");
 out.println("<ul  class = 'offer'>");
 out.println("<li>");
@@ -102,7 +102,7 @@ out.println("<h3>Buy this product and get upto Rs.50 on next cake purchase.</h3>
 out.println("</li>");
 out.println("</ul>");
 
-out.println("<p>"+description+"</p>");
+out.println("<p>&nbsp &nbsp &nbsp &nbsp &nbsp"+description+"</p>");
 out.println("<h2>Details</h2>");
 out.println("<h4>Cake flavor &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;: "+title+"</h4>");
 

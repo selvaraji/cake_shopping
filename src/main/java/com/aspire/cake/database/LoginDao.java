@@ -62,6 +62,10 @@ public class LoginDao {
 			{
 				if(resultSet.getString(9).equals("admin"))
 				{
+					HttpSession ses = request.getSession();
+					ses.setAttribute("email", email);
+					String name = resultSet.getString(3);
+					ses.setAttribute("name", name);
 					response.sendRedirect("html/admin.jsp");
 				}
 				else

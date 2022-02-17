@@ -74,7 +74,10 @@
 				loginDao.loadDriver(loginDao.databaseDriver);
 				Connection connection = loginDao.getConnection();
 				
+				
+				
 				try{
+					
 					Statement statement = connection.createStatement();
 					ResultSet resultSet = statement.executeQuery(query);
 					while(resultSet.next())
@@ -109,8 +112,21 @@
 				}
 				catch(Exception e)
 				{
+					String type ="";
+					try{
+						Statement statement1 = connection.createStatement();
+						ResultSet resultSet1 = statement1.executeQuery("SELECT TYPE FROM USER WHERE EMAIL ='"+session.getAttribute("email")+"';");
+						resultSet1.next();
+						type = resultSet1.getString(1);
+					}
+					catch(Exception s)
+					{
+						System.out.println(s);
+					}
 					Statement statement = connection.createStatement();
 					ResultSet result = statement.executeQuery("SELECT * FROM ORDERS");
+					if(type.equals("admin"))
+					{
 					while(result.next())
 			        {
 					        String productID = result.getString(6);
@@ -144,7 +160,7 @@
 					  			out.println("</tr>");
 					        }
 			        }
-					
+					}
 				}
 		       %>
 		       </table>

@@ -81,6 +81,7 @@
     margin-top: 10px; 
     background-color: orange; 
     color : white;
+    box-shadow: 10px 10px 5px #000000;
   }
   
    #buy {
@@ -93,11 +94,14 @@
     margin-top: 10px;
     background-color: green;
     color: white;
+    box-shadow: 10px 10px 5px #000000;
+
   }
   
   
   #cart:hover , #buy:hover{
   background-color : lime;
+  box-shadow: 6px 6px 2px #000000;
   }
   
   
@@ -185,6 +189,9 @@
     border-radius: 15px ; 
   }
   
-  
+  small {
+  	text-decoration-line: line-through;
+  	color: crimson;
+  }
   
   

@@ -23,7 +23,8 @@
         	{
         		arrayList.add(resultSet.getString(1));
         	}
-        		for(String id: arrayList)
+        	Collections.sort(arrayList);
+        	for(String id: arrayList)
         		{
         			out.println("<option value='"+id+"'>"+id+"</option>");
         		}
@@ -44,6 +45,8 @@
         <input type="text" name="photoURL" id="photoURL" placeholder="Image Location URL" >    
         <br><br>
         <input type="text" name="info" id="info" placeholder="Short Description" >    
+        <br><br>
+        <input type="text" name="key" id="key" placeholder="Keywords (Separat by Comma)">    
         <br><br>
         
         <input type="submit"  id = "button" value="Update Cake" >  

@@ -34,44 +34,38 @@
     <div class ="row">
         <div class ="col-md-5">
             <div class = "sam">
-                <div class="scrollmenu">
-                    <img src = "../photos/cake 1.png" onclick="shapeClick('../photos/cake 1.png')">
-                    <img src = "../photos/cake 3.png" onclick="shapeClick('../photos/cake 3.png')">
-                    <img src = "../photos/cake 4.png" onclick="shapeClick('../photos/cake 4.png')">
-                    <img src = "../photos/cake 5.png" onclick="shapeClick('../photos/cake 5.png')">
-                    <img src = "../photos/cake 3.png" onclick="shapeClick('../photos/cake 3.png')">
-                    <img src = "../photos/cake 4.png" onclick="shapeClick('../photos/cake 4.png')">
-                    <img src = "../photos/cake 1.png" onclick="shapeClick('../photos/cake 1.png')">
-                    <img src = "../photos/cake 5.png" onclick="shapeClick('../photos/cake 5.png')">
+              <br>
+              	<div class="scrollmenu">
+                    <img src = "../photos/design/round/top/rev_velvet.png" onclick="topClick('../photos/design/round/top/rev_velvet.png')" >
+                    <img src = "../photos/design/round/top/butter.png" onclick="topClick('../photos/design/round/top/butter.png')" >
+                    <img src = "../photos/design/round/top/choco.png" onclick="topClick('../photos/design/round/top/choco.png')" >
+                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
+                    <img src = "../photos/cake 3.png" onclick="topClick('../photos/cake 3.png')" >
+                    <img src = "../photos/cake 4.png" onclick="topClick('../photos/cake 4.png')" >
+                    <img src = "../photos/cake 1.png" onclick="topClick('../photos/cake 1.png')" >
+                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
                 </div>
+              
+              
                 <div class="scrollmenu">
-                    <img src = "../photos/cake 1.png" onclick="sideClick('../photos/cake 1.png')">
-                    <img src = "../photos/cake 3.png" onclick="sideClick('../photos/cake 3.png')" >
-                    <img src = "../photos/cake 4.png" onclick="sideClick('../photos/cake 4.png')" >
+                    <img src = "../photos/design/round/side/red velvet.png" onclick="sideClick('../photos/design/round/side/red velvet.png')">
+                    <img src = "../photos/design/round/side/red-velvet-des.png" onclick="sideClick('../photos/design/round/side/red-velvet-des.png')" >
+                    <img src = "../photos/design/round/side/white-choco.png" onclick="sideClick('../photos/design/round/side/white-choco.png')" >
                     <img src = "../photos/cake 5.png" onclick="sideClick('../photos/cake 5.png')" >
                     <img src = "../photos/cake 3.png" onclick="sideClick('../photos/cake 3.png')" >
                     <img src = "../photos/cake 4.png" onclick="sideClick('../photos/cake 4.png')" >
                     <img src = "../photos/cake 1.png" onclick="sideClick('../photos/cake 1.png')" >
                     <img src = "../photos/cake 5.png" onclick="sideClick('../photos/cake 5.png')" >
                 </div>
-                <div class="scrollmenu">
-                    <img src = "../photos/cake 1.png" onclick="topClick('../photos/cake 1.png')" >
-                    <img src = "../photos/cake 3.png" onclick="topClick('../photos/cake 3.png')" >
-                    <img src = "../photos/cake 4.png" onclick="topClick('../photos/cake 4.png')" >
-                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
-                    <img src = "../photos/cake 3.png" onclick="topClick('../photos/cake 3.png')" >
-                    <img src = "../photos/cake 4.png" onclick="topClick('../photos/cake 4.png')" >
-                    <img src = "../photos/cake 1.png" onclick="topClick('../photos/cake 1.png')" >
-                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
-                </div>
+                
                 <input type="button" id = "buynow" value = "Buy Now" onclick="">
             </div>
         </div>
         <div class="col-md-3">
             <div id = "output">
-                <img id = "shape" src = "../photos/test2.png">
-                <img id = "side" src = "../photos/test1.png">
-                <img id = "upper" src = "../photos/cake 5.png">
+                <!--  <img id = "shape" src = "../photos/test2.png">-->
+                <img id = "side" src = "../photos/design/round/side/white-choco.png">
+                <img id = "upper" src = "../photos/design/round/top/rev_velvet.png">
             </div>
         </div>
     </div>
