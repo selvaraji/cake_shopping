@@ -199,3 +199,18 @@ table {
 	display: inline-block;
 }
 
+
+#helpTaple {
+	table-layout: fixed;
+	width: 100%;
+}
+
+#helpTaple th {
+	background-color: green;
+	height: 40px;
+}
+
+#helpTaple td {
+	background-color: white;
+	height: 40px;
+}

@@ -29,8 +29,8 @@
         onclick="location.href='../html/updateCake.jsp'">  
         
         <br><br>
-        <input type="button"  id="button" value="View Tickets"
-        onclick="viewTicket()">  
+        <input type="button"  id="button" value="View Queries"
+        onclick="location.href='../html/viewQueries.jsp'">  
         <br><br>
     </form>     
 </div> 

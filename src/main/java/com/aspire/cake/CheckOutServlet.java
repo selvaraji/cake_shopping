@@ -71,7 +71,7 @@ public class CheckOutServlet extends HttpServlet {
 				ses.setAttribute("ordersID", ordersID);
 				String query3 = "UPDATE USER SET ordersID = '"+ordersID+"' where email = '"+email+"';";
 				statement1.execute(query3);
-				String query4 = "INSERT INTO ORDERS VALUES('"+order+"','"+ses.getAttribute("name")+"','"+email+"','"+ses.getAttribute("phoneNumber")+"','"+ses.getAttribute("address")+"','"+iter+"','"+"PROCESSING"+"');";
+				String query4 = "INSERT INTO ORDERS VALUES('"+order+"','"+ses.getAttribute("name")+"','"+email+"','"+ses.getAttribute("phoneNumber")+"','"+ses.getAttribute("address")+"','"+iter+"','"+"PROCESSING"+"',' ', ' ');";
 				statement1.execute(query4);
 			}
 			
