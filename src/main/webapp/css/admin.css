@@ -159,7 +159,12 @@ img {vertical-align: middle;}
   
   
   #searchButton {
-  	padding: 10px 14px;
+  	padding: 0px 0px;
     margin-right: 20px;
+    height:40px;
+    width:40px;
     border-radius: 10px;
+    background: url('../photos/icons/search.png') 0px 0px no-repeat;
+    
   }
+  

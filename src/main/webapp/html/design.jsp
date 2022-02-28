@@ -58,7 +58,7 @@
                     <img src = "../photos/cake 5.png" onclick="sideClick('../photos/cake 5.png')" >
                 </div>
                 
-                <input type="button" id = "buynow" value = "Buy Now" onclick="">
+                <input type="button" id = "buynow" value = "Add to Cart" onclick="buy()">
             </div>
         </div>
         <div class="col-md-3">

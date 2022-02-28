@@ -13,7 +13,7 @@
 		 <title>Cart</title>
 		 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> 
     </head>
-    <body>
+    <body'>
     <div id= "bar">
 		<ul>
 		<li><a href="../html/user.jsp">Home</a></li>
@@ -47,6 +47,10 @@
 	        <%
 	        LoginDao loginDao = new LoginDao();
 	        String ids = loginDao.cartLoad(email);
+	        ResultSet addressRseultSet = loginDao.profile(email);
+	        addressRseultSet.next();
+	        String address = addressRseultSet.getString(6);
+	        String phoneNumber = addressRseultSet.getString(5);
 	        GetProducts getProducts = new GetProducts();
 	        ResultSet resultSet = getProducts.products();
 	        int totalItems = 0; double totalPrice = 0;
@@ -95,20 +99,46 @@
 	        </ul>
 	        </div>
 	        
-	        <div class = "details">
-		        <form action ="../checkOut"  method = "post">
-			        <input type = "hidden" name = "email" value =<%=email %> >
+	        <div class = "det">
+	        <br>
 			        <h2>Total Items : </h2>
 			        <h2 id = "totalitems"><%=totalItems %></h2>
 			        <br> <br>
 			        <h2>Total Price :</h2>
 			        <h2 id = "totalprice">RS : <%=totalPrice %></h2>
 			        <br> <br>
+			        <h2>Address :</h2>
+			        <br><br>
+			        <h2><%=address %></h2>
+			        <br><br>
+			         <h2>Phone Number :</h2>
+			         <br><br>
+			        <h2><%=phoneNumber %></h2>
+			        <br><br>
+			        <h2>Update Address :</h2>
+			        <br><br>
+			       <form action ="../html/updateAddress.jsp?" >
+			       	 <input id = "address" name = "address" type ="text" placeholder = "Address (Optional)"  minlength="10" >
+			        <br> <br>
+			        <input id = "phoneNumber" name= "phoneNumber" type ="text" placeholder = "Phone Number (Optional)"  minlength ="10" maxlength="10">
+			        <br> <br>
+			        <input type="submit" id ="updateAddress" value="Update">
+			       </form>
+			        
+			</div>
+			
+			   <br>
+			   <div class = "details">
+			   <br>
+			   <h1>Payment Details</h1>
+			   <form action ="../checkOut"  method = "post">
+			        <input type = "hidden" name = "email" value =<%=email %> >
+			        <br> <br>
 			        <input id = "cardNumber" type ="text" placeholder = "Card number" required minlength="14" maxlength = "16">
 			        <br> <br>
-			        <input id = "cardName" type ="text" placeholder = "Card Holder Name" required>
-			        <br> <br>
 			        <input id = "valid" type ="text" placeholder = "Valid upto (mm/yy)" required minlength ="5" maxlength="5">
+			        <br> <br>
+			        <input id = "cardName" type ="text" placeholder = "Card Holder Name" required>
 			        <br> <br>
 			        <input id = "cvv" type ="text" placeholder = "CVV" required minlength ="3" maxlength= "3" >
 			        <br> <br>

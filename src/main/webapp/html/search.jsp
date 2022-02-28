@@ -34,7 +34,7 @@
 			<li><a href="../html/about.jsp" class="about">About</a>
 		</li>
 		<li class='search' style='float:right;'>
-		 <input type ='button' id='searchButton' value ='S'  onclick="search()">
+		 <input type ='button' id='searchButton' onclick="search()">
 		</li>
 		<li class='search' style='float:right;'>
 		<input type='text' id='search'>

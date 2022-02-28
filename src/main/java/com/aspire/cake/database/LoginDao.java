@@ -149,4 +149,23 @@ public class LoginDao {
 		return cartIDData;
 	}
 	
+	public ResultSet profile(String email)
+	{
+		ResultSet resultSet = null;
+		String query1 = "SELECT * FROM USER WHERE EMAIL = '"+email+"';";
+		try {
+			LoginDao loginDao = new LoginDao();
+			loginDao.loadDriver(loginDao.databaseDriver);
+			Connection connection = loginDao.getConnection();
+			Statement statement1;
+			statement1 = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY );
+			resultSet = statement1.executeQuery(query1);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		return resultSet;
+	}
+	
 }

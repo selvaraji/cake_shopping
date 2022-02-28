@@ -1,4 +1,7 @@
 
+
+
+
 .product {
 	width: 800px;
 	height : 500px;  
@@ -20,6 +23,18 @@
     border-radius: 17px;  
     padding-left: 7px;  
     color: #000000; 
+    margin-top: 100px;
+    background-color: cyan;
+}
+#updateAddress {
+	width: 300px;  
+    height: 30px;  
+    border: none;  
+    font-size: 18px;
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: #000000; 
+    background-color: cyan;
 }
 
 .product-card {
@@ -28,7 +43,7 @@
 }
 
 
-#button:hover {
+#button:hover, #updateAddress:hover {
 	background-color: green;
 }
 
@@ -42,11 +57,42 @@ h2{
 	float:left;
 }
 
-#cardNumber, #cardName, #valid, #cvv{
-	width :300px;
-	height :30px;
-	border-radius: 3px;  
-    padding-left: 8px;  
+#cardNumber{
+	width: 398px;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 8px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 110px;
+}
+ #cardName{
+	width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 8px;
+    float: left;
+    margin-left: -400px;
+    margin-top: 110px;
+}
+ #valid{
+	width: 150px;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 8px;
+    float: left;
+    margin-top: 110px;
+    margin-left: -304px;
+}
+
+#cvv {
+	width: 277px;
+    height: 41px;
+    border-radius: 3px;
+    padding-left: 8px;
+    position: absolute;
+    margin-top: -63px;
+    margin-left: -180px; 
 }
 
 #cardNumber:valid, #cardName:valid, #valid:valid, #cvv:valid{
@@ -105,7 +151,51 @@ table {
     margin-bottom: 10px;
 }
 
+#address {
+	 border-radius: 3px;
+     padding-left: 8px;
+     width: 300px;
+     height: 30px;
+}
+
+#phoneNumber {
+	 border-radius: 3px;
+     padding-left: 8px;
+     width: 300px;
+     height: 30px;
+}
+
 #remove:hover {
 	background-color:red;
 	
+	
 }
+
+#ordersID {
+	width: 200px;
+    height: 30px;
+    float: left;
+}
+
+#querytext{
+	width: 100%;
+    height: 30px;
+    float: left;
+}
+
+#submitQuery{
+	width: 200px;
+    height: 30px;
+    float: left;
+}
+
+.details form {
+	margin-top: 50px;
+	background-image: url("../photos/icons/card.jpg");
+	width: 913px;
+	height: 276px;
+}
+.det {
+	display: inline-block;
+}
+

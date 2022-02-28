@@ -5,8 +5,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 import java.util.Random;
 
+import javax.mail.*;
+import javax.mail.internet.*;
 import com.aspire.cake.database.LoginDao;
 
 import jakarta.servlet.ServletException;
@@ -71,10 +74,52 @@ public class CheckOutServlet extends HttpServlet {
 				String query4 = "INSERT INTO ORDERS VALUES('"+order+"','"+ses.getAttribute("name")+"','"+email+"','"+ses.getAttribute("phoneNumber")+"','"+ses.getAttribute("address")+"','"+iter+"','"+"PROCESSING"+"');";
 				statement1.execute(query4);
 			}
+			
+			/*//mail
+			
+
+		    final String to = "techselvaraji@gmail.com";
+		    final String subject = "Online Cake Ordering System";
+		    final String messg = "Your Order Successfully placed";
+		    final String from = "2k18cse091@kiot.ac.in";
+		    final String pass = "2k18cse091";
+
+		    String host = "smtp.gmail.com";
+		    Properties props = new Properties();
+		    props.put("mail.smtp.host", host);
+		    props.put("mail.transport.protocol", "smtp");
+		    props.put("mail.stp.ssl.trust", host);
+		    props.put("mail.smtp.auth", "true");
+		    props.put("mail.smtp.starttls.enable", "true");
+		    props.put("mail.user", from);
+		    props.put("mail.password", pass);
+		    props.put("mail.port", "465");
+		    Session mailSession = Session.getInstance(props, new javax.mail.Authenticator() {
+		        @Override
+		        protected PasswordAuthentication getPasswordAuthentication() {
+		        	return new PasswordAuthentication(from, pass);
+		        }
+		    });
+		
+		    try {
+		        MimeMessage message = new MimeMessage(mailSession);
+		        message.setFrom(new InternetAddress(from));
+		        message.addRecipient(Message.RecipientType.TO,
+		                new InternetAddress(to));
+		        message.setSubject(subject);
+		        message.setText(messg);
+		        Transport.send(message);
+		    } catch (MessagingException mex) {
+		        mex.printStackTrace();
+
+		    }
+		    
+			*/
 			response.sendRedirect("html/orderPlaced.jsp");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

@@ -107,10 +107,10 @@
 		<li><a href="../html/about.jsp" class="about">About</a>
 		</li>
 		<li class='search'>
-		 <input type ='button' id='searchButton' value ='S'  onclick="search()">
+		 <input type ='button' id='searchButton'  onclick="search()" >
 		</li>
 		<li class='search'>
-		<input type='text' id='search'>
+		<input type='text' id='search' placeholder="choco">
 		</li>
 	</ul>
 	<br>
@@ -173,8 +173,9 @@
 		
 <form action="../user" method="post">
 	<div class = "function" id = "offer">
-	<h1>New Models</h1>
+	<h1>Trending Cakes</h1>
 	<% 
+	//String[] list = {, , , , , , , , , , , };
 	int count = 0;
 		while (resultSet.next()) {
 					String productID = resultSet.getString(1);

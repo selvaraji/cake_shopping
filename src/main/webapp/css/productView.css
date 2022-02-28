@@ -1,10 +1,12 @@
 @charset "ISO-8859-1";
 
-  .productView li {
-    float: right;
+  .productView{
+    float: left;
     list-style-type: none;
-    margin-top: 100px;
+    margin-top: 70px;
+    width: 30%;
     margin-left: 50px;
+    position: fixed;
   }
   
   body {
@@ -15,17 +17,22 @@
   #image {
   border-radius :10px; 
   }
+  
   .stars img , #star img{
  	width : 20px;
   	height : 20px;
   }
   
   .offer{
-  display: inline;
+  margin: 0px;
   }
   
   .offer li {
   display: flex;
+  }
+  
+  .offer h3 {
+  color: green;
   }
   
   .offer img {
@@ -38,8 +45,41 @@
   .details {
   	float: right;
     margin-top: 70px;
-    max-width: 65%;
+    width: 65%;
   }
+  
+  .details span {
+    color: green;
+    border-radius: 4px;
+    background-color: aqua;
+    padding-left: 5px;
+    font-size: 20px;
+    padding-right: 5px;
+  }
+  
+ .review {
+    float: inherit;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+ }
+ 
+ .review ul {
+ 	overflow: hidden;
+ 	 height: 270px;
+ }
+ 
+ .review li{
+    border-radius: 15px ;  
+    box-shadow: 4px 4px 7px #000000;
+ 	list-style-type: none;
+ 	height: 250px;
+ 	overflow: hidden;
+ 	float: left;
+ 	margin-left: 1%;
+ 	width: 30%;
+ 	
+ }
   
   .function {
     width: auto;  
@@ -53,23 +93,7 @@
     text-align: center;
   }
  
-  .scroll {
-  	overflow-x: auto;
-    max-height: 250px;
-    padding: 10px;
-    border-radius: 15px ;  
-    box-shadow: 10px 10px 20px #000000;
-  }
-  .scroll ul {
-  	white-space: nowarp;
-  	overflow-x: auto;
-  }
-  
-  .scroll ul li  {
-  float : left;
-  display: inline;
-  }
-  
+
   
   #cart {
     width: 150px;  

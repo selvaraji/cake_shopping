@@ -42,13 +42,14 @@
 				out.println("<img id = 'cake'  src=" + photoURL + " alt=''>");
 				out.println("</div>");
 				out.println("<div class='product-details'>");
-				out.println("<span class='product-catagory'>" + title + "</span><br>");
-				out.println("<p>"+ category + "</p>");
+				out.println("<span class='product-catagory' style='margin-top:10px'>" + title + "</span>");
+				out.println("<p >"+ category + "</p>");
 				out.println("<p><b>" + weight + "kgs</b></p>");
 				out.println("<div class='product-bottom-details'>");
 				out.println("<div class='product-price'>"+"RS."
 				+ price + "</div>");
 				out.println("<div class='product-links'>");
+				//out.println("<a href='../html/updateCake.jsp'><button >temp</button></a>");
 				out.println("</div>");
 				out.println("</div>");
 				out.println("</div>");

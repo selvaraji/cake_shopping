@@ -1,8 +1,12 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page  import="com.aspire.cake.bean.GetProducts" import="java.sql.*"
-		import = "java.util.*"  language="java" contentType="text/html; charset=ISO-8859-1"
+		import = "java.util.*"  import = "java.util.Date"  import = "java.text.SimpleDateFormat" 
+		language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
     <%
+    SimpleDateFormat f = new SimpleDateFormat("d/MM/yyyy HH:mm:ss");
+    Date date = new Date();
     GetProducts getProducts = new GetProducts();
 	ResultSet resultSet = getProducts.products();
 	String  productID = (String) request.getParameter("id");
@@ -43,7 +47,7 @@
 <link rel="stylesheet" type="text/css" href="../css/footer.css">
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-<body>
+<body >
 <div id= "bar">
 		<ul>
 		<li><a href="../html/user.jsp">Home</a></li>
@@ -63,23 +67,21 @@
 		</ul>
 	</div>
 
-<div class ='productView'>
-<ul>
-<li style ='position: fixed;'>
+<div class ='productView' >
 <%
 out.println("<img id='image' src="+photoURL+">");
 String link ="../user?addtocart="+productID;
 String link2 = "../user?buynow="+productID;
 out.println("<br><a href ="+link+" ><input type='button' id='cart' value='add to cart'><a/>");
 out.println("<a href ="+link2+"><input type='button' id='buy' value='Buy now'></a>");
+out.println("<p> Delivery  Expected on "+ (Integer.parseInt(f.format(date).substring(0,2))+1)+"th, if order before "+(Integer.parseInt(f.format(date).substring(11,13))+1)+":"+f.format(date).substring(14,19)+"</p>");
+//out.println(f.format(date));
 
-//safty measure- winni
 %>
-</li>
-
-</ul>
 </div>
-<div class= 'details'>
+
+
+<div class= 'details' >
 <%
 out.println("<h2>"+title+"</h2>");
 out.println("<div class='stars'>");
@@ -87,10 +89,10 @@ out.println("<img src='../photos/icons/star.png'>"+
 "<img src='../photos/icons/star.png'>"+
 "<img src='../photos/icons/star.png'>"+
 "<img src='../photos/icons/star.png'>"+
-"<img src='../photos/icons/star_half.png'>");
+"<img src='../photos/icons/star_half.png'> <span>4.5</span>");
 out.println("</div>");
 out.println("<h2> " + "RS." +price+"&nbsp <small>Rs."+(Double.parseDouble(price) + 100)+"</small></h2>");
-out.println("<h2>offers</h2>");
+out.println("<h2>Offers & Coupons</h2>");
 out.println("<ul  class = 'offer'>");
 out.println("<li>");
 out.println("<img src ='../photos/icons/tag.png'>");
@@ -129,13 +131,15 @@ out.println("<ul><li><p>Store cream cakes in a refrigerator. Fondant cakes shoul
 		"<li><p>Please check the placement of these items before serving to small children.</p></li>"+
 		"<li><p>The cake should be consumed within 24 hours.</p></li>"+
 		"<li><p>Enjoy your cake!</p></li>");
-out.println("<h2>Reviews</h2>");
 out.println("");
 //ingrdientss
 //reviews
 //related products
 %>
-<div class ='scroll'>
+</div>
+
+
+<div class ='review'>
 	<ul>
 	<li>
 	<img src='../photos/icons/user-male.png'>
@@ -148,7 +152,7 @@ out.println("");
 	<img src='../photos/icons/star.png'>
 	</div>
 	<h2>Happy Anniversary cake</h2>
-	<p> I ordered this cake for last valantine's day n loved by my wife very much. so i ordered it again for my anniversary and the second was also good as first one...Thank..</p>
+	<p>&nbsp; &nbsp; I ordered this cake for last valantine's day n loved by my wife very much. so i ordered it again for my anniversary and the second was also good as first one</p>
 	</li>
 	
 	<li>
@@ -162,7 +166,7 @@ out.println("");
 	<img src='../photos/icons/star_half.png'>
 	</div>
 	<h2>Trusty Worthy Shopping</h2>
-	<p> Extraordinary service, thanking your team.I will order Again and Again</p>
+	<p> &nbsp; &nbsp; Extraordinary service, thanking your team.I will order Again and Again</p>
 	</li>
 	
 	<li>
@@ -176,18 +180,17 @@ out.println("");
 	<img src='../photos/icons/star_half.png'>
 	</div>
 	<h2>Awesome Really fabluous</h2>
-	<p>its just awesome... And i was so happy to receive the cake on time</p>
+	<p> &nbsp; &nbsp; its just awesome... And i was so happy to receive the cake on time</p>
 	</li>
 	</ul>
-</div>
+</div> 
 <br>
-</div>
 <!-- popup -->
 
 		<div id="popup1" class="overlay">
 			<div class="popup" id = "pop">
 				<h2>Item Successfully Added To Cart</h2>
-				<a href = '../html/cart.jsp'><input type='button' id='cart' value='cart'></a>
+				<a href = '../html/cart.jsp'><input type='button' id='cart' value='Go To Cart'></a>
 				<a href = '../html/user.jsp' ><input type='button' id='buy' value='home'></a>
 				<a class="close" href="#">&times;</a>
 			</div>

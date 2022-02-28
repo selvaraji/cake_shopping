@@ -1,12 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page  import = "com.aspire.cake.bean.GetProducts"  import = "com.aspire.cake.database.LoginDao" import ="java.sql.*"
+ language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
+
+<%String email = (String) session.getAttribute("email"); 
+LoginDao loginDao = new LoginDao();
+loginDao.loadDriver(loginDao.databaseDriver);
+String query = "SELECT ORDERSID FROM USER WHERE EMAIL='"+email+"' ";
+Connection connection = loginDao.getConnection();
+ResultSet result = null;
+try {
+	Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY );
+	result = statement.executeQuery(query);
+} catch (SQLException e) {
+	e.printStackTrace();
+}
+result.next();
+%>
 <!DOCTYPE html>
 <html>
     <head>
 		<meta charset="ISO-8859-1">
-		<link rel="stylesheet" type="text/css" href="../css/user.css"> 
-    	<link rel="stylesheet" type="text/css" href="../css/admin.css">  
+		<link rel="stylesheet" type="text/css" href="../css/user.css">
+		 <link rel="stylesheet" type="text/css" href="../css/cart.css">
+		 <link rel="stylesheet" type="text/css" href="../css/admin.css"> 
+		 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> 
+		  <title>Help</title>
     </head>
     <body>
     <div id= "bar">
@@ -32,6 +51,22 @@
           <div class = "function">
         <br><br><br>
 	        <h1>Help Page</h1>
-	        </div>
+	        
+	        <select name  = 'ordersID' id= "ordersID">
+        	<option value="none">Select OrderID</option>
+        	<%
+        	String[] list = result.getString(1).split("@");
+        		for(String order: list)
+        		{
+        			out.println("<option value='"+order+"'>"+order+"</option>");
+        		}
+        	%>
+        	</select>
+        	<input  type="text" name="querytext" id="querytext" placeholder="Add Your Query" required>  
+        	
+        	<input type="button" name="submitQuery" id="submitQuery" value="Submit" onclick="location.href='html/signup.jsp'">  
+		   
+        </div>
+	       
     </body>
 </html>

@@ -13,7 +13,7 @@
     <div class="admin">    
     <h2 id ="admin">Admin</h2><br>    
     <form id="admin" method="get" action="">      
-        <input type="button"  id="button" value="View Orders" 
+        <input type="button"  id="button" value="View All Orders" 
         onclick="location.href='../html/orders.jsp'">     
         <%
         String ordersID = null;
