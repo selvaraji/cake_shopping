@@ -4,6 +4,17 @@
 
 
 <%String email = (String) session.getAttribute("email"); 
+try
+{
+	if(email.equals(null))
+	{
+		//
+	}
+}
+catch(Exception e)
+{
+	response.sendRedirect("../html/loginPopUp.jsp");
+}
 LoginDao loginDao = new LoginDao();
 loginDao.loadDriver(loginDao.databaseDriver);
 String query = "SELECT ORDERSID FROM USER WHERE EMAIL='"+email+"' ";
@@ -54,6 +65,7 @@ result.next();
           <div class = "function">
         <br><br><br>
 	        <h1>Help Page</h1>
+	        <h2>New Request</h2><br><br>
 	        <form action="../html/addQuery.jsp">
 	        <select name  = 'ordersID' id= "ordersID">
         	<option value="none">Select OrderID</option>
@@ -72,6 +84,7 @@ result.next();
 		   <br><br>
 		   </form>
 		   <br><br>
+		   <h2>Older Requests</h2><br><br>
 		  <table id="helpTaple">
 		  <tr>
 		  <th>Order ID</th>

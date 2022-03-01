@@ -27,6 +27,7 @@ try {
 <body>
 
  <div class = "function">
+ <h1>All Queries</h1>
         <br><br><br>
 		  <table id="helpTaple">
 		  <tr>

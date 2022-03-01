@@ -36,15 +36,13 @@
             <div class = "sam">
               <br>
               	<div class="scrollmenu">
-                    <img src = "../photos/design/round/top/rev_velvet.png" onclick="topClick('../photos/design/round/top/rev_velvet.png')" >
-                    <img src = "../photos/design/round/top/butter.png" onclick="topClick('../photos/design/round/top/butter.png')" >
-                    <img src = "../photos/design/round/top/choco.png" onclick="topClick('../photos/design/round/top/choco.png')" >
-                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
-                    <img src = "../photos/cake 3.png" onclick="topClick('../photos/cake 3.png')" >
-                    <img src = "../photos/cake 4.png" onclick="topClick('../photos/cake 4.png')" >
-                    <img src = "../photos/cake 1.png" onclick="topClick('../photos/cake 1.png')" >
-                    <img src = "../photos/cake 5.png" onclick="topClick('../photos/cake 5.png')" >
-                </div>
+              	
+              	<%for(int i=1; i<9; i++)
+              		{
+              		out.println("<img src = \"../photos/design/round/top/"+i+".png\" onclick=\"topClick('../photos/design/round/top/"+i+".png')\">");
+              		
+              		}%>
+                   </div>
               
               
                 <div class="scrollmenu">
@@ -65,7 +63,7 @@
             <div id = "output">
                 <!--  <img id = "shape" src = "../photos/test2.png">-->
                 <img id = "side" src = "../photos/design/round/side/white-choco.png">
-                <img id = "upper" src = "../photos/design/round/top/rev_velvet.png">
+                <img id = "upper" src = "../photos/design/round/top/1.png">
             </div>
         </div>
     </div>

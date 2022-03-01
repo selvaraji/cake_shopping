@@ -18,6 +18,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import com.aspire.cake.bean.*;
 
 
 @WebServlet("/checkOut")
@@ -75,46 +76,9 @@ public class CheckOutServlet extends HttpServlet {
 				statement1.execute(query4);
 			}
 			
-			/*//mail
-			
-
-		    final String to = "techselvaraji@gmail.com";
-		    final String subject = "Online Cake Ordering System";
-		    final String messg = "Your Order Successfully placed";
-		    final String from = "2k18cse091@kiot.ac.in";
-		    final String pass = "2k18cse091";
-
-		    String host = "smtp.gmail.com";
-		    Properties props = new Properties();
-		    props.put("mail.smtp.host", host);
-		    props.put("mail.transport.protocol", "smtp");
-		    props.put("mail.stp.ssl.trust", host);
-		    props.put("mail.smtp.auth", "true");
-		    props.put("mail.smtp.starttls.enable", "true");
-		    props.put("mail.user", from);
-		    props.put("mail.password", pass);
-		    props.put("mail.port", "465");
-		    Session mailSession = Session.getInstance(props, new javax.mail.Authenticator() {
-		        @Override
-		        protected PasswordAuthentication getPasswordAuthentication() {
-		        	return new PasswordAuthentication(from, pass);
-		        }
-		    });
-		
-		    try {
-		        MimeMessage message = new MimeMessage(mailSession);
-		        message.setFrom(new InternetAddress(from));
-		        message.addRecipient(Message.RecipientType.TO,
-		                new InternetAddress(to));
-		        message.setSubject(subject);
-		        message.setText(messg);
-		        Transport.send(message);
-		    } catch (MessagingException mex) {
-		        mex.printStackTrace();
-
-		    }
-		    
-			*/
+			//
+			Email mail = new Email();
+			mail.sendMail(email, "Order Successfully placed("+ordersID+")");
 			response.sendRedirect("html/orderPlaced.jsp");
 		} catch (SQLException e) {
 			e.printStackTrace();

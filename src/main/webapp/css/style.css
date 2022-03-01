@@ -208,3 +208,9 @@ h1{
   
  }
  
+ .forgotPasswordBut {
+	color: black;
+    background-color: transparent;
+    border: transparent;
+}
+ 

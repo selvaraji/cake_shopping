@@ -2,6 +2,17 @@
 <%@ page import = "com.aspire.cake.database.LoginDao" import = "com.aspire.cake.bean.GetProducts" language="java" contentType="text/html; charset=ISO-8859-1"
     import = "java.sql.*" pageEncoding="ISO-8859-1"%>
     <%String email =(String) session.getAttribute("email");
+    try
+	{
+		if(email.equals(null))
+		{
+			//
+		}
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("../html/loginPopUp.jsp");
+	}
     %>
 <!DOCTYPE html>
 <html>
@@ -118,9 +129,9 @@
 			        <h2>Update Address :</h2>
 			        <br><br>
 			       <form action ="../html/updateAddress.jsp?" >
-			       	 <input id = "address" name = "address" type ="text" placeholder = "Address (Optional)"  minlength="10" >
+			       	 <input id = "address" name = "address" type ="text" placeholder = "Add Address (Optional)"  minlength="10" >
 			        <br> <br>
-			        <input id = "phoneNumber" name= "phoneNumber" type ="text" placeholder = "Phone Number (Optional)"  minlength ="10" maxlength="10">
+			        <input id = "phoneNumber" name= "phoneNumber" type ="text" placeholder = "Add Phone Number (Optional)"  minlength ="10" maxlength="10">
 			        <br> <br>
 			        <input type="submit" id ="updateAddress" value="Update">
 			       </form>

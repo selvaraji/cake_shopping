@@ -1,7 +1,20 @@
 <%@ page  import="com.aspire.cake.bean.GetProducts" import="java.sql.*"
 		import = "java.util.*" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%
+String email = (String) session.getAttribute("email");
+try
+{
+	if(email.equals(null))
+	{
+		//
+	}
+}
+catch(Exception e)
+{
+	response.sendRedirect("../html/loginPopUp.jsp");
+}
+%>
 
 <!DOCTYPE html>
 <html>

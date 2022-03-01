@@ -2,7 +2,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <% String name = (String) session.getAttribute("name"); %>
+    <%
+    String email = (String) session.getAttribute("email");
+    try
+	{
+		if(email.equals(null))
+		{
+			//
+		}
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("../html/loginPopUp.jsp");
+	}
+    String name = (String) session.getAttribute("name"); %>
 <!DOCTYPE html>
 <html>
     <head>

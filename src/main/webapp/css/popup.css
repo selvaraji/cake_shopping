@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 10px;
+  width: 40%;
+  position: relative;
+  background-color: white;
+}
+
+ .popup a {
+	padding-left  : 20px;
+}
+
+button {
+	background-color: green;
+    width: 200px;
+    height: 30px;
+    color: white;
+    margin-left: 30%;
+    box-shadow: 5px 10px 7px black;
+    border-radius: 5px;
+}
+
+button:hover {
+	background-color: lightgreen;
+    box-shadow: 2px 3px 7px black;
+    color: black;
+}

@@ -8,6 +8,17 @@
 	GetProducts getProducts = new GetProducts();
 	ResultSet resultSet = getProducts.products();
 	String email = (String) session.getAttribute("email");
+	try
+	{
+		if(email.equals(null))
+		{
+			//
+		}
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("../html/loginPopUp.jsp");
+	}
 	String name = (String) session.getAttribute("name");
 	String age = (String) session.getAttribute("age");
 	String phoneNumber = (String) session.getAttribute("phoneNumber");

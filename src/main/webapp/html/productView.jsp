@@ -5,7 +5,19 @@
     pageEncoding="ISO-8859-1"%>
     
     <%
-    SimpleDateFormat f = new SimpleDateFormat("d/MM/yyyy HH:mm:ss");
+    String email = (String) session.getAttribute("email");
+    try
+	{
+		if(email.equals(null))
+		{
+			//
+		}
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("../html/loginPopUp.jsp");
+	}
+    SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     Date date = new Date();
     GetProducts getProducts = new GetProducts();
 	ResultSet resultSet = getProducts.products();

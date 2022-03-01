@@ -1,7 +1,7 @@
 <!-- Project Name : Online Cake Shopping System
 	 Author Name  : Selvaraji A
 	 Started At   : 12-12-2021
-	 Updated At   : 28-02-2022
+	 Updated At   : 01-03-2022
 	 git- https://github.com/selvaraji/cake_shopping.git -->
 
 
@@ -37,7 +37,7 @@
 		    <br><br>
 		    <input type="button" name="signUp" id="signUp" value="SignUp" onclick="location.href='html/signup.jsp'">  
 		    <br><br>    
-		    <label><b> Forgot Password</b></label> 
+		    <button class='forgotPasswordBut' onclick='location.href="html/forgotPassword.jsp"'><b> Forgot Password</b></button>
 	    </form>     
 	</div>    
 </body>

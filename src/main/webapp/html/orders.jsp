@@ -1,7 +1,20 @@
 <%@ page import = "com.aspire.cake.database.LoginDao" import = "java.sql.*" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    
+    <%
+    String em = (String) session.getAttribute("name");
+    try
+	{
+		if(em.equals(null))
+		{
+			//
+		}
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("../html/loginPopUp.jsp");
+	}
+	%>
 <!DOCTYPE html>
 <html>
     <head>
