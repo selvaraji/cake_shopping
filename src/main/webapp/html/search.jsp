@@ -42,15 +42,14 @@ catch(Exception e)
 					</div>
 				</div>
 			</li>
-			<li><a href="../html/about.jsp" class="about">About</a>
-			</li>
+			
 			<li><a href="../html/about.jsp" class="about">About</a>
 		</li>
 		<li class='search' style='float:right;'>
 		 <input type ='button' id='searchButton' onclick="search()">
 		</li>
 		<li class='search' style='float:right;'>
-		<input type='text' id='search'>
+		<input type='text' id='search' placeholder='choco'>
 		</li>
 		</ul>
 	</div>

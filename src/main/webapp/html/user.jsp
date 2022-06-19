@@ -302,7 +302,7 @@
 					<p>+91 99999 99999</p>
 				</div>
 				<div>
-					<p><a href="mailto:support@cake.com">support@cake.com</a></p>
+					<p><a href="mailto:2k18cse091@kiot.ac.in">support@cake.com</a></p>
 				</div>
 			</div>
 			<div class="footer-right">

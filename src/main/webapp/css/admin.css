@@ -66,15 +66,19 @@ img {vertical-align: middle;}
 
  #bar {
  list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;    padding: 0;
     overflow: visible;
-    width: 100%;
+    width: 99%;
     position: fixed;
     background-color: aqua;
-    border-radius: 15px ;  
+    border-radius: 10px ;  
     box-shadow: 10px 10px 20px #000000;
  	float:left;
+ }
+ 
+ #bar ul {
+ margin: 0px;
  }
  
   #bar ul li a:hover, .dropdown:hover .categorydropbtn, .dropdown:hover .accountdropbtn , #check:hover{

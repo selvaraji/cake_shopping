@@ -24,7 +24,7 @@
 		 <title>Cart</title>
 		 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> 
     </head>
-    <body'>
+    <body>
     <div id= "bar">
 		<ul>
 		<li><a href="../html/user.jsp">Home</a></li>
@@ -67,6 +67,7 @@
 	        int totalItems = 0; double totalPrice = 0;
 	        
 	        int count =1;
+	        boolean design = true;
 	        while(resultSet.next())
 	        {
 	        	String productID = resultSet.getString(1);
@@ -76,7 +77,6 @@
 		        	out.println("<h1>Card Is Empty !!</h1>");
 		        	return;
 	        	}
-	        	
 		        if(ids.contains(productID))
 		        {
 		        	count++;
@@ -104,7 +104,47 @@
 			        		out.println("</div>");
 			        		out.println("</div>");
 			        		out.println("</li>");
+		       }
+		        if(ids.contains("~") && design == true)
+	        	{
+		        	String[] idsAll = ids.split("@");
+		        	for(String id :idsAll)
+		        	{
+		        		if(id.contains("~"))
+		        		{
+		        			System.out.println(id);
+		        			count++;
+				        	totalItems++;
+				        	String price = "1000";
+				        	String weight = "1";
+				        	String stock = "123";
+				        	String title = "Custom Cake";
+				        	char top = id.charAt(0);
+				        	char side = id.charAt(2);
+				        	System.out.println(id+"-"+top+" "+side);
+				        	totalPrice += 1000;
+					        out.println("<li>");
+					        out.println("<div class='product-card'>");
+					        out.println("<div class='product-tumb'>");
+					        		
+					        		out.println("<div class='designcart' style= position:relative;float:left:left:20px> <img id = 'cake1' style = position:absolute  src='../photos/design/round/top/"+top+".png' alt=''>");
+					        		out.println("<img id = 'cake2' style = position:relative src='../photos/design/round/side/"+side+".png' alt=''> </div>");
+					        		out.println("</div>");
+					        		out.println("<div class='details'>");
+					        		out.println("<span class='product-catagory'>"+title+"</span>");
+					        		out.println("<div class='product-price'>"+"RS."+price+"</div>");
+					        		String link = "../html/removeCart.jsp?remove="+id;
+					        		out.println("<a href = "+link+"><button id='remove' >Remove</button></a>");
+					        		out.println("<div class='product-links'>");
+					        		out.println("</div>");
+					        		out.println("</div>");
+					        		out.println("</div>");
+					        		out.println("</li>");
 		        		}
+		        	}
+		        	design = false;
+	        		
+	        	}
 	        }
 	        %>
 	        </ul>

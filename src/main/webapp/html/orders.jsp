@@ -95,9 +95,31 @@
 					ResultSet resultSet = statement.executeQuery(query);
 					while(resultSet.next())
 			        {
-						if(ordersID.contains( resultSet.getString(1)))
+						if(ordersID.contains(resultSet.getString(1)))
 						{
+							
+							if( resultSet.getString(6).contains("~"))
+							{
+							        String orderID= resultSet.getString(1);
+							        String status = resultSet.getString(7);
+							        
+							        String phoneNumber = resultSet.getString(4);
+							        String address = resultSet.getString(5);
+								String price = "1000";
+					  			String name = "Custom Cake";
+					  			out.println("<tr>");
+					  			out.println("<td ><h3>"+orderID+"</h3>");
+					  			out.println("<td><h3>"+name+"</h3>");
+					  			out.println("<td><h3>"+price+"</h3>");
+					  			out.println("<td><h3>"+address+"</h3>");
+					  			out.println("<td><h3>"+phoneNumber+"</h3>");
+					  			out.println("<td><h3>"+status+"</h3>");
+					  			out.println("</tr>");
+							}
+							else
+							{
 					        String productID = resultSet.getString(6);
+					    
 					        String orderID= resultSet.getString(1);
 					        String status = resultSet.getString(7);
 					        
@@ -119,6 +141,7 @@
 					  			out.println("<td><h3>"+status+"</h3>");
 					  			out.println("</tr>");
 					        }
+							}
 			        }
 			        }
 					
@@ -142,6 +165,36 @@
 					{
 					while(result.next())
 			        {
+						if( result.getString(6).contains("~"))
+						{
+							String productID = result.getString(6);
+					        String name = result.getString(2);
+					        String orderID= result.getString(1);
+					        String email = result.getString(3);
+					        String status = result.getString(7);
+					        String phoneNumber = result.getString(4);
+					        String address = result.getString(5);
+					        
+					    	String price ="1000";
+				  			String title = "Custom Cake";
+				  			out.println("<tr>");
+				  			out.println("<td ><h3>"+orderID+"</h3>");
+				  			out.println("<td><h3>"+name+"</h3>");
+				  			out.println("<td ><h3>"+email+"</h3>");
+				  			out.println("<td ><h3>"+title+"</h3>");
+				  			out.println("<td ><h3>"+price+"</h3>");
+				  			out.println("<td ><h3>"+address+"</h3>");
+				  			out.println("<td ><h3>"+phoneNumber+"</h3>");
+				  			out.println("<td><h3>"+status+"</h3>");
+				  			out.println("<form action='../html/updateStatus.jsp' >");
+				  			out.println("<input type = 'text' id = 'status' name='"+orderID+
+				  			"' placeholder = 'Update Status' required>");
+				  			out.println("<input type ='Submit' id = 'update' name = 'update' value = '"+orderID+"'>");
+				  			out.println("</form>");
+				  			out.println("</tr>");
+						}
+						else
+						{
 					        String productID = result.getString(6);
 					        String name = result.getString(2);
 					        String orderID= result.getString(1);
@@ -172,6 +225,7 @@
 					  			out.println("</form>");
 					  			out.println("</tr>");
 					        }
+						}
 			        }
 					}
 				}

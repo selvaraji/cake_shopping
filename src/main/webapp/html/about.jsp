@@ -36,9 +36,9 @@
 	<div class="profile">
 		<h1>Online Cake Shopping System</h1>
 		<br><br><br>
-		<h2>Author Name : Selvaraji A</h2>
+		<h2>Author Name : Selvaraji A, Adithya S, Karmugilan S, Gauthesh J</h2>
 		<h2>Started At : 12-12-2021</h2>
-		<h2>Updated At : 01-03-2022</h2>
+		<h2>Updated At : 19-06-2022</h2>
 		<h2>IDE : Eclipse IDE for Java Developers - 2021-12 (4.22.0)</h2>
 		<h2>Server : Tomcat Version 10.0</h2>
 		<h2>Database : Mysql Workbench CE 8.0</h2>

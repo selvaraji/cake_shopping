@@ -32,10 +32,15 @@ public class UserServlet extends HttpServlet {
 	{
 		String cartID = request.getParameter("buynow");
 		String addtoCartId = request.getParameter("addtocart");
+		
 		try 
 		{
 		if(!addtoCartId.equals(null))
 		{
+			if(addtoCartId.contains("~"))
+			{
+				System.out.println(addtoCartId);
+			}
 			HttpSession session = request.getSession();
 			String email = (String) session.getAttribute("email");
 			LoginDao loginDao = new LoginDao();

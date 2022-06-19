@@ -37,32 +37,31 @@
               <br>
               	<div class="scrollmenu">
               	
-              	<%for(int i=1; i<9; i++)
-              		{
-              		out.println("<img src = \"../photos/design/round/top/"+i+".png\" onclick=\"topClick('../photos/design/round/top/"+i+".png')\">");
+              		<%for(int i=1; i<9; i++)
+              			{
+              				out.println("<img src = \"../photos/design/round/top/"+i+".png\" onclick=\"topClick('../photos/design/round/top/"+i+".png')\">");
               		
-              		}%>
-                   </div>
+              			}%>
+                </div>
               
               
                 <div class="scrollmenu">
-                    <img src = "../photos/design/round/side/red velvet.png" onclick="sideClick('../photos/design/round/side/red velvet.png')">
-                    <img src = "../photos/design/round/side/red-velvet-des.png" onclick="sideClick('../photos/design/round/side/red-velvet-des.png')" >
-                    <img src = "../photos/design/round/side/white-choco.png" onclick="sideClick('../photos/design/round/side/white-choco.png')" >
-                    <img src = "../photos/cake 5.png" onclick="sideClick('../photos/cake 5.png')" >
-                    <img src = "../photos/cake 3.png" onclick="sideClick('../photos/cake 3.png')" >
-                    <img src = "../photos/cake 4.png" onclick="sideClick('../photos/cake 4.png')" >
-                    <img src = "../photos/cake 1.png" onclick="sideClick('../photos/cake 1.png')" >
-                    <img src = "../photos/cake 5.png" onclick="sideClick('../photos/cake 5.png')" >
+                
+                		<%for(int i=1; i<4; i++)
+              			{
+              				out.println("<img src = \"../photos/design/round/side/"+i+".png\" onclick=\"sideClick('../photos/design/round/side/"+i+".png')\">");
+              		
+              			}%>
+                
                 </div>
                 
-                <input type="button" id = "buynow" value = "Add to Cart" onclick="buy()">
+                <input type="button" id = "buynow" value = "Goto Buy" onclick="buy()">
             </div>
         </div>
         <div class="col-md-3">
             <div id = "output">
                 <!--  <img id = "shape" src = "../photos/test2.png">-->
-                <img id = "side" src = "../photos/design/round/side/white-choco.png">
+                <img id = "side" src = "../photos/design/round/side/1.png">
                 <img id = "upper" src = "../photos/design/round/top/1.png">
             </div>
         </div>

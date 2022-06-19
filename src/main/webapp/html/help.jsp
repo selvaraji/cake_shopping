@@ -73,6 +73,7 @@ result.next();
         	String[] list = result.getString(1).split("@");
         		for(String order: list)
         		{
+        			if(!order.equals("test"))
         			out.println("<option value='"+order+"'>"+order+"</option>");
         		}
         	%>
